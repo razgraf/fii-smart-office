@@ -78,7 +78,15 @@ class SideBar extends Component {
                 icon : "calendar_today",
                 name : "expiry",
                 label : "Closest expiration:",
-                value : "Thursday, May 2nd 2019"
+                value : (()=>{
+                    if(Config.isEmpty(element.stock) || element.stock.length === 0) return "-";
+                    let date = Moment(element.stock[0].expirationDate,Moment.ISO_8601);
+                    for(let i = 1; i < element.stock.length; i++){
+                        if(date.isAfter(Moment(element.stock[i].expirationDate,Moment.ISO_8601)))
+                            date =  Moment(element.stock[i].expirationDate,Moment.ISO_8601);
+                    }
+                    return date.format("MMMM Do YYYY");
+                })()
             },
             {
                 icon : "business",
@@ -177,7 +185,7 @@ class SideBar extends Component {
                                       <div className="header">
                                           <p>{element.name}</p>
                                           <p className="time">
-                                              { Moment(notification["createdAt"],"MM/DD/YYYY hh:mm:ss").format('MMMM Do YYYY, h:mm:ss a')}
+                                              { Moment(notification["createdAt"],Moment.ISO_8601).format('MMMM Do YYYY, h:mm:ss a')}
                                           </p>
                                       </div>
                                       <div className="notification-item-message">
