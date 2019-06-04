@@ -19,7 +19,7 @@ As a company, you save money with the help of accurate predictions on the quanti
 # Live prototypes
 __UI:__ https://sketch.cloud/s/8YoYw  
 __Presentation:__ [Slides](https://docs.google.com/presentation/d/1Exhjd5faIRZzHKV9I27OtIhJSb7XnLcMCSFdHZd6HQ4/edit?usp=sharing )    
-__Front Office:__ https://festive-easley-47826a.netlify.com/
+__Front Office:__ https://festive-easley-47826a.netlify.com/  
 __Back Office:__ https://relaxed-goldberg-9d3a60.netlify.com/   
 
 
