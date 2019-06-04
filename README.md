@@ -1,10 +1,7 @@
-# fii-plp-binder
+# fii-smart-office
 
-# Project for FII-PLP (II.1.) Course 2018 
+# Project for FII-IP (II.2.) Course 2019 
 ![Screenshot of the platform](Presentation.png)
-
-
-
 
 #### Developers:
 - Razvan Gabriel Apostu (Lead)
@@ -14,74 +11,16 @@
 - Badarau Bogdan 
 - Popa Dorian
 
+#### Description:
+A smart platform for managing stock and consumables in a company.   
+As an employee, you can quickly notify management about the lack of a certain item at the "coffee-station" near your office (e.g. No more milk).  
+As a company, you save money with the help of accurate predictions of the quantity needed by day. Special cases such as high-consumption periods (internships) or low (holidays) will be taken into account to keep away from overspending.
 
-
-# Live prototype (Employee/Manager App) and working platforms
-__Prototypes:__ https://sketch.cloud/s/8YoYw  
-__Presentation:__ https://docs.google.com/presentation/d/1Exhjd5faIRZzHKV9I27OtIhJSb7XnLcMCSFdHZd6HQ4/edit?usp=sharing   
+# Live prototypes
+__UI:__ https://sketch.cloud/s/8YoYw  
+__Presentation:__ [Slides](https://docs.google.com/presentation/d/1Exhjd5faIRZzHKV9I27OtIhJSb7XnLcMCSFdHZd6HQ4/edit?usp=sharing )    
 __Front Office:__ https://priceless-dijkstra-ab3aef.netlify.com/   
 __Back Office:__ https://cocky-mahavira-d62945.netlify.com/   
 
-# [Roadmap] Front-Office
-- [x] Grid of Categories, Subcategories and Elements
-- [x] Element Profile
-- [x] Action Modals (confirmation modal, quanitity request modal)
-- [x] Networking link for Universe (RECEIVE - global request)
-- [x] Networking link for Product Request (DO)
-- [x] Networking link for Notification (DO)
-- [x] Responsive layout rules
-- [x] Fix notification.date issue with Moment.js
-
-# [Roadmap] Back-Office
-- [x] Tree of Elements (Category -> ... -> Subcategory -> ... -> Item -> *Stations*)
-- [x] Memorize Tree structure (for navigation integrity)
-- [x] Stations Screen
-  - [x] List
-  - [x] Structure & Side Bar
-- [x] Item Stock Screen
-  - [x] List
-  - [x] Structure & Side Bar
-- [x] Statistics Screen
-  - [x] List (Stations)
-  - [x] Structure & Side Bar (Special)
-  - [x] Chart.js (React wrapper) test
-  - [x] Calendar (with time options for dataset)
-  - [x] Charts (mixed, with time options for dataset)
-- [x] Product Requests Screen
-- [x] Notifications Screen
-- [x] Action Modals
-- [x] Networking system
-- [ ] Networking link for Universe
-- [ ] Smart caching system for Universal Networking
-- [ ] Networking link for Refill (DO)
-- [ ] Networking link for Edit (DO)
-- [ ] Networking link for Clear Warnings (DO)
-- [ ] Networking link for Notification dismiss (DO)
-- [ ] Networking link for Statistics (RECEIVE)
-- [x] Responsive layout rules
-
-# [Roadmap] Concept & Resources
-- [x] Create C4 diagrams
-- [x] Create wireframes (and UI) for the
-  - [X] Employee Web App
-  - [x] Manager Web App
-- [X] Finish React tutorials (1-2 weeks)
-
-
-# Useful links:
-Networking: [__Axios__](https://github.com/axios/axios)  
-Date & Time: [__Moment.js__](https://momentjs.com/)    
-Graphs and Charts: __Chart.js__ with the [__React Wrapper__](https://github.com/jerairrest/react-chartjs-2/)  
-
-# FratiiBrothers
-Team members: <br>-Apostu Razvan (The Big Brother)<br>
-                   -Barbu Vlad<br>
-                   -Acsinte Matei<br>
-                   -Badarau Bogdan<br>
-                   -Popa Dorian<br>
-                   -Mocanu Alex<br>
-                                      
-# Trello
-https://trello.com/b/Q7hPnHmI/fratii-brothers
 
 
