@@ -1,7 +1,7 @@
 # fii-smart-office
 
 # Smart Office | The Front Office
-![Screenshot of the platform](../Presentation.png)
+![Screenshot of the platform](../Presentation_Employee.png)
 
 
 #### Description:
