@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="513dcac1-8cf0-4d0d-9161-1275ea55d02e" name="Default Changelist" comment="" />
+    <list default="true" id="513dcac1-8cf0-4d0d-9161-1275ea55d02e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../smart-office-manager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-office-manager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-office-manager/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-office-manager/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-office-manager/src/Components/Statistics/SupplyTabContentCalendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-office-manager/src/Components/Statistics/SupplyTabContentCalendar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-office-manager/src/Components/Statistics/SupplyTabContentGraph.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-office-manager/src/Components/Statistics/SupplyTabContentGraph.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smart-office-manager/src/Model/Networking.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../smart-office-manager/src/Model/Networking.jsx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,38 +30,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Item.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5340">
-              <caret line="368" column="20" selection-start-line="368" selection-start-column="16" selection-end-line="368" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/NavBar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="145">
+              <caret line="141" column="22" lean-forward="true" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -381,12 +377,12 @@
       <workItem from="1559132278607" duration="2241000" />
       <workItem from="1559253719115" duration="1270000" />
       <workItem from="1559631895597" duration="350000" />
-      <workItem from="1559676506356" duration="240000" />
+      <workItem from="1559676506356" duration="2062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94721000" />
+    <option name="totallyTimeSpent" value="96543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -457,11 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2287" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/styles/ActionItemPopupConfirmation.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
@@ -512,13 +503,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -758,10 +742,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/NavBar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="145">
+          <caret line="141" column="22" lean-forward="true" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

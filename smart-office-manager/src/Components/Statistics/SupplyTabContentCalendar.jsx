@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import "../../resources/styles/Statistics.scss";
 import AppContext from "../../Model/AppContext";
 import Config from "../../config";
@@ -7,7 +7,7 @@ import Calendar from "./Calendar";
 import Moment from "moment"
 
 
-class SupplyTabContentCalendar extends PureComponent {
+class SupplyTabContentCalendar extends Component {
 
 
     constructor(props){
@@ -18,17 +18,33 @@ class SupplyTabContentCalendar extends PureComponent {
             statistic : null,
             month : null,
             year : null,
+            element : this.props.element,
+            station : this.props.station
         };
 
     }
+
+
+    componentWillReceiveProps(nextProps, nextContext) {
+        if( (nextProps.hasOwnProperty("element") && this.state.element !== nextProps.element)
+            || (nextProps.hasOwnProperty("station") && this.state.station !== nextProps.station)){
+
+            this.setState({
+                element : nextProps.element,
+                station : nextProps.station
+            },()=>{
+                this.doPickTime(Moment().format("M"),Moment().format("YYYY"));
+            });
+
+        }
+    }
+
 
     componentDidMount() {
         this.doPickTime(Moment().format("M"),Moment().format("YYYY"));
     }
 
     render() {
-
-
 
         let element = this.props.hasOwnProperty("element") && !Config.isEmpty(this.props.element) ? this.props.element : null;
 
@@ -77,19 +93,24 @@ class SupplyTabContentCalendar extends PureComponent {
         )
     }
 
-
     doPickTime(month,year){
 
-        if(Config.isEmpty(this.props.element)) return;
 
-        console.log(this.props);
+        let element = this.props.element;
+        let station = this.props.station;
+
+
+        console.log(element, station);
+
+        if(Config.isEmpty(element) || Config.isEmpty(station)) return;
+
 
         this.context.startLoading();
         this.context.doGetStatistics(
             Config.OPTION_MONTH,
             year+ "-" + month + "-01",
-            Config.isEmpty(this.props.element)  ? null : this.props.element.ID,
-            Config.isEmpty(this.props.station) ? null :  this.props.station.ID,
+            element.ID,
+            station.ID,
         ).then((statistic)=>{
             console.log(statistic);
             this.setState({
@@ -101,8 +122,6 @@ class SupplyTabContentCalendar extends PureComponent {
             console.log(error);
             this.context.showAlert("Server error",Config.ALERT_TYPE_ERROR);
         }).finally(()=>{ this.context.stopLoading();})
-
-
 
     }
 }

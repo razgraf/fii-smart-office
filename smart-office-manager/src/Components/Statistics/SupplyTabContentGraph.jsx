@@ -5,7 +5,7 @@ import Config from "../../config";
 import Tree from "../Tree/Tree";
 import Moment from "moment"
 import Graph from "./Graph";
-import SupplyTabContentCalendar from "./SupplyTabContentCalendar";
+
 
 
 
@@ -25,6 +25,10 @@ class SupplyTabContentGraph extends Component {
         byDay : Moment().format("YYYY-MM-DD"),
         byWeek : Moment().format("YYYY-[W]WW"),
         byMonth : Moment().format("MMMM") +" " + Moment().format("YYYY"),
+
+
+        element : this.props.element,
+        station : this.props.station
     };
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -33,8 +37,28 @@ class SupplyTabContentGraph extends Component {
             && this.state.byDay === nextState.byDay
             && this.state.byWeek === nextState.byWeek
             && this.state.byMonth === nextState.byMonth
+
+            && this.state.element === nextState.element
+            && this.state.station === nextState.station
             )
     }
+
+
+    componentWillReceiveProps(nextProps, nextContext) {
+        if( (nextProps.hasOwnProperty("element") && this.state.element !== nextProps.element)
+            || (nextProps.hasOwnProperty("station") && this.state.station !== nextProps.station)){
+
+            this.setState({
+                element : nextProps.element,
+                station : nextProps.station
+            },()=>{
+                this.updateStatistic();
+            });
+
+        }
+    }
+
+
 
     componentDidMount() {
         this.updateStatistic();

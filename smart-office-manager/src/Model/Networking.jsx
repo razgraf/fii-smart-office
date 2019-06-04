@@ -4,19 +4,8 @@ import Config from "./../config"
 
 class Networking {
 
-    /**
-     *
-     * @param {Station} station
-     * @param {Element} element
-     * @param quantity
-     * @param expirationDate
-     */
+
     static doRefillStock(station, element, quantity, expirationDate){
-        /**
-         * The scope will be bound to App.js
-         */
-        let scope = this;
-        console.log(scope);
 
 
 
@@ -59,99 +48,70 @@ class Networking {
     }
 
 
-    /**
-     * Updates the stock fields
-     * @param {Station} station
-     * @param {Element} element
-     * @param {Array.<{quantity: int, expirationDate: String}>} stockCollection
-     */
     static doEditStock(station, element, stockCollection){
-
+        console.log(station, element, stockCollection);
+        return null;
     }
 
 
-    /**
-     * Clears warnings
-     * @param {Station} station
-     * @param {Element} element
-     */
     static doClearWarnings(station, element){
-        /**
-         * The scope will be bound to App.js
-         */
+        console.log(station, element);
         let scope = this;
-        console.log(scope);
 
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             resolve(scope);
         });
 
-        return new Promise( (resolve, reject) => {
-
-            axios
-                .delete(Config.API_NOTIFICATIONS_CLEAR,{params: JSON.stringify({
-                    stationId : station.ID,
-                    elementId : element.ID
-                })})
-                .then(response => {
-                    console.log(response);
-                    try {
-                        let status = response["status"];
-                        if (parseInt(status) === Config.HTTP_REQUEST_STATUS_OK) {
-                            let data = response["data"];
-                            resolve(data);
-                        }
-                    } catch (e) {
-                        console.error("Parsing error at load.");
-                        console.error(e);
-                        reject();
-                    }
-                })
-                .catch(error => {
-                    console.log(error);
-                    reject();
-                })
-                .finally(() => {
-                    // always executed
-                });
-        });
+        // return new Promise( (resolve, reject) => {
+        //
+        //     axios
+        //         .delete(Config.API_NOTIFICATIONS_CLEAR,{params: JSON.stringify({
+        //             stationId : station.ID,
+        //             elementId : element.ID
+        //         })})
+        //         .then(response => {
+        //             console.log(response);
+        //             try {
+        //                 let status = response["status"];
+        //                 if (parseInt(status) === Config.HTTP_REQUEST_STATUS_OK) {
+        //                     let data = response["data"];
+        //                     resolve(data);
+        //                 }
+        //             } catch (e) {
+        //                 console.error("Parsing error at load.");
+        //                 console.error(e);
+        //                 reject();
+        //             }
+        //         })
+        //         .catch(error => {
+        //             console.log(error);
+        //             reject();
+        //         })
+        //         .finally(() => {
+        //             // always executed
+        //         });
+        // });
     }
 
-    /**
-     *
-     * @param {Station} station
-     * @param {Element} element
-     * @param warningID
-     * @return {Promise<*>}
-     */
+
     static doClearWarning(station,element,warningID){
-        /**
-         * The scope will be bound to App.js
-         */
+        console.log(station, element, warningID);
         let scope = this;
 
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             resolve(scope);
         });
     }
 
 
-    /**
-     *
-     * @param option
-     * @param date
-     * @param itemID
-     * @param stationID
-     * @return {Promise<any>}
-     */
-    static doGetStatistics(option, date, itemID, stationID){
+
+    static doGetStatisticsML(option, date, itemID, stationID){
 
 
         /**
          * Temporary local dataset
          */
 
-        this.doGetLocalStatistics(option,date,itemID,stationID);
 
 
         /**
@@ -243,7 +203,8 @@ class Networking {
 
 
 
-    static doGetLocalStatistics(option, date, itemID,stationID){
+    static doGetStatistics(option, date, itemID,stationID){
+        console.log(option,date,itemID, stationID);
         return new Promise((resolve, reject) =>{
 
             try {
@@ -368,6 +329,7 @@ class Networking {
                 statistic.byMonth.data = statistic.byMonth.data.slice(0, daysInMonth);
 
                 resolve(statistic);
+
             }catch (e) {
                 console.error(e);
                 reject({})
@@ -383,11 +345,6 @@ class Networking {
     }
 
     static doGetProductRequests(){
-        /**
-         * The scope will be bound to App.js
-         */
-       // let scope = this;
-
         return new Promise( (resolve, reject) => {
 
             axios
@@ -464,45 +421,6 @@ class Networking {
     }
 
 
-    static doGetStatisticsML(element, startDate, length){
-        /**
-         * The scope will be bound to App.js
-         */
-        let scope = this;
-
-
-        return new Promise( (resolve, reject) => {
-
-            axios
-                .get("http://79.118.91.29:8081/prediction/" + element.ID + "/"+startDate+"/"+length,{
-                    headers  : {
-                        "Authentication" : "Token 679895cf533b0dbcbb15661852037bdcd4ec80f2"
-                    }
-                })
-                .then(response => {
-                    console.log(response);
-                    try {
-                        let status = response["status"];
-                        if (parseInt(status) === Config.HTTP_REQUEST_STATUS_OK) {
-                            resolve(response["data"]);
-                        }
-                    } catch (e) {
-                        console.error("Parsing error at load.");
-                        console.error(e);
-                        reject();
-                    }
-                })
-                .catch(error => {
-                    console.log(error);
-                    reject();
-                })
-                .finally(() => {
-                    // always executed
-                });
-        });
-
-
-    }
 
 
 }

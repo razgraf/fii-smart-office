@@ -12,7 +12,7 @@ import SNotification from "./Model/SNotification";
 import Modal from "./Components/Common/Modal";
 import "./resources/styles/Modal.scss"
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import Networking from "./Model/Networking";
+
 
 class App extends Component {
   constructor(props) {
