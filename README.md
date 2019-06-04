@@ -1,3 +1,21 @@
+# fii-plp-binder
+
+# Project for FII-PLP (II.1.) Course 2018 
+![Screenshot of the platform](binder_cover_center.png)
+
+
+
+
+#### Developers:
+- Razvan Gabriel Apostu (Lead)
+- Mocanu Alex
+- Barbu Vlad
+- Acsinte Matei 
+- Badarau Bogdan 
+- Popa Dorian
+
+
+
 # Live prototype (Employee/Manager App) and working platforms
 __Prototypes:__ https://sketch.cloud/s/8YoYw  
 __Presentation:__ https://docs.google.com/presentation/d/1Exhjd5faIRZzHKV9I27OtIhJSb7XnLcMCSFdHZd6HQ4/edit?usp=sharing   
