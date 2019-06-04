@@ -14,7 +14,7 @@
 #### Description:
 A smart platform for managing stock and consumables in a company.   
 As an employee, you can quickly notify management about the lack of a certain item at the "coffee-station" near your office (e.g. No more milk). __The Front Office__     
-As a company, you save money with the help of accurate predictions of the quantity needed by day. Special cases such as high-consumption periods (internships) or low (holidays) will be taken into account to keep away from overspending. __The Back Office and The Science Office__     
+As a company, you save money with the help of accurate predictions on the quantities needed and usage. Special cases such as high-consumption periods (internships) or low (holidays) will be taken into account to keep away from overspending. __The Back Office and The Science Office__     
 
 # Live prototypes
 __UI:__ https://sketch.cloud/s/8YoYw  
